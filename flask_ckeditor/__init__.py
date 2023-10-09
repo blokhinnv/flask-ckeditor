@@ -1,6 +1,15 @@
 import warnings
 from functools import wraps
-from flask import current_app, Markup, Blueprint, url_for, request, jsonify, render_template_string
+
+from flask import (
+    Blueprint,
+    Markup,
+    current_app,
+    jsonify,
+    render_template_string,
+    request,
+    url_for,
+)
 
 from flask_ckeditor.fields import CKEditorField  # noqa
 from flask_ckeditor.utils import get_url, random_filename  # noqa
@@ -26,11 +35,10 @@ class _CKEditor(object):
         serve_local = serve_local or current_app.config['CKEDITOR_SERVE_LOCAL']
         local_preset_list = ['basic', 'standard', 'full']
         cdn_preset_list = local_preset_list + ['standard-all', 'full-all']
-
         if serve_local and pkg_type not in local_preset_list:
             warnings.warn('The provided pkg_type string was invalid, '
                           'it should be one of basic/standard/full.')
-            pkg_type = 'standard'
+            pkg_type = 'full'
         if not serve_local and pkg_type not in cdn_preset_list:
             warnings.warn('The provided pkg_type string was invalid, '
                           'it should be one of basic/standard/standard-all/full/full-all.')
@@ -88,7 +96,6 @@ class _CKEditor(object):
                 fileTools_requestHeaders: {
                     'X-CSRFToken': '{{ csrf_token() }}',
                 },''')
-
         return Markup(f'''
 <script type="text/javascript">
     document.getElementById("{name}").classList.remove("ckeditor");
