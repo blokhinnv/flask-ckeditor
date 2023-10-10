@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+<div class="container">
+  <h1>Edit Blog Post</h1>
+  <form method="POST">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" name="title" required>
+    </div>
+    <div class="mb-3">
+        <textarea name="editor" id="editor"></textarea>
+        <script src="{{ url_for('static', filename='full/ckeditor.js') }}"></script>
+        <!-- <script src="../../../flask_ckeditor/static/"></script> -->
+
+        <script>
+          CKEDITOR.replace( 'editor', {
+            customConfig: 'config.js'
+          });
+          console.log(CKEDITOR.config)
+        </script>
+    </div>
+
+    <style>
+      .iframe #document html body table{
+        background-color: aqua;
+      }
+    </style>
+
+    <button type="submit" class="btn btn-primary">Edit Post</button>
+  </form>
+</div>
+{% endblock %}
+
