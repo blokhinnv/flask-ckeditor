@@ -10,6 +10,9 @@ bootstrap = Bootstrap4(app)
 editor = CKEditor(app)
 
 
+app.config["CKEDITOR_BTN_DATA_PATH"] = "https://jsonplaceholder.typicode.com/photos"
+
+
 @app.route("/")
 def form():
 
