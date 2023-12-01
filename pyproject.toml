@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "Flask-CKEditor"
+version = "0.0.1"
+description = "CKEditor integration for Flask."
+authors = ["blokhinnv <blokhinnv@yandex.ru>"]
+readme = "README.md"
+include = ["flask_ckeditor/static/*"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^2.3"
+WTForms = "^3.0.0"
+
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+include = '\.pyi?$'
