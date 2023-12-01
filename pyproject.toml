@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "Flask-CKEditor-TLI"
+name = "Flask-CKEditor"
 version = "0.0.1"
 description = "CKEditor integration for Flask."
 authors = ["blokhinnv <blokhinnv@yandex.ru>"]
