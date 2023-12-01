@@ -47,5 +47,6 @@ setup(
         'Programming Language :: Python :: 3.11',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development :: Libraries :: Python Modules'
-    ]
+    ],
+    package_data={'package': ['static/*']}
 )
