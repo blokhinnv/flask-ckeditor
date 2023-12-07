@@ -1,9 +1,8 @@
 import warnings
 from functools import wraps
-
+from markupsafe import Markup
 from flask import (
     Blueprint,
-    Markup,
     current_app,
     jsonify,
     render_template_string,
