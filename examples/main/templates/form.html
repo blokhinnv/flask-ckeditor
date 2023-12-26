@@ -5,11 +5,17 @@
 
 
 <div class="container">
-  <h1>Edit Blog Post</h1>
+  <h1>Изменение</h1>
   <form method="POST">
     <div class="mb-3">
-        <label for="title" class="form-label">Title</label>
+        <button>Сохранить</button>
+        <button>Отменить</button>
+        <br/>
+        <label for="title" class="form-label">Название:</label>
         <input type="text" class="form-control" id="title" name="title" required>
+        <label for="title" class="form-label">Описание:</label>
+        <input type="text" class="form-control" id="description" name="title" required>
+
     </div>
     <div class="mb-3">
         <textarea name="editor" id="editor"></textarea>
