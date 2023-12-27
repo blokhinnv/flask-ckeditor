@@ -6,6 +6,7 @@ CKEDITOR.dialog.add('inputsdb', function(editor) {
       var xhr = new XMLHttpRequest();
       xhr.open('GET', dataPath);
       xhr.onload = function() {
+        console.log(xhr)
         if (xhr.status === 200) {
           resolve(JSON.parse(xhr.responseText));
         } else {

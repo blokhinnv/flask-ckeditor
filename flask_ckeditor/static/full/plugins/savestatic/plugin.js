@@ -7,7 +7,7 @@ CKEDITOR.plugins.add('savestatic', {
               var data_html = editor.getData();
       
 
-              var data = {name : '1', description : '2', content : data_html}
+              var data = {name : 'Title', description : 'Note', content : data_html}
               // var data = {name : '1', description : '2'}
 
               console.log(data)
