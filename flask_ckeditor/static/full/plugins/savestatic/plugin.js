@@ -7,11 +7,11 @@ CKEDITOR.plugins.add('savestatic', {
               var data_html = editor.getData();
 
               var data = {"name" : '1', "description" : '2', "context" : data_html}
-              console.log(data)
+              console.log(JSON.stringify(data))
               fetch('pages/api', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json; charset=utf-8'
                 },
                 body: JSON.stringify(data)
               })
