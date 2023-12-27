@@ -6,10 +6,10 @@ CKEDITOR.editorConfig = function( config ) {
 	// Определите изменения в конфигурации по умолчанию здесь. Например:
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
-	config.extraPlugins = 'exportodt,exportpdf,inputsdb';
+	config.extraPlugins = 'savestatic,exportodt,exportpdf,inputsdb';
 
 	config.toolbar = [
-		["Source", "Save", "DocProps", "Preview","Print","Templates","document",'exportodt','exportpdf','inputsdb'],
+		["Source",'savestatic',"DocProps", "Preview","Print","Templates","document",'exportodt','exportpdf','inputsdb'],
 		["Cut","Copy","Paste","PasteText",'-',"Undo","Redo"],
 		["Find","Replace","SelectAll"],
 		['Bold', 'Italic', 'Underline', "Strike","Subscript","Superscript"],
