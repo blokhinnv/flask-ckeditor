@@ -7,16 +7,8 @@ CKEDITOR.plugins.add('savestatic', {
               var data_html = editor.getData();
       
 
-              // let utf8 = data_html.getBytes("UTF8");
-              // htmlMessage= new String(new Base64().encode(utf8));
-
-
-              // let dec = new Base64().decode(htmlMessage.getBytes());
-              // htmlMessage = new String(dec , "UTF8");
-
-
-              // var data = {name : '1', description : '2', context : data_html}
-              var data = {name : '1', description : '2'}
+              var data = {name : '1', description : '2', context : data_html}
+              // var data = {name : '1', description : '2'}
 
               console.log(data)
               
@@ -28,7 +20,7 @@ CKEDITOR.plugins.add('savestatic', {
                 },
                 body: JSON.stringify(data)
               })
-              .then(response => console.log(response.json()))
+              .then(response => console.log(response))
               .then(data => console.log('Success:', data))
               .catch((error) => console.error('Error:', error));
           }
