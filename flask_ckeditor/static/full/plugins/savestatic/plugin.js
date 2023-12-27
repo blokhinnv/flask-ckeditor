@@ -21,9 +21,10 @@ CKEDITOR.plugins.add('savestatic', {
               fetch('pages/api', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
                 },
-                body: data
+                body: JSON.stringify(data)
               })
               .then(response => console.log(response.json()))
               .then(data => console.log('Success:', data))
