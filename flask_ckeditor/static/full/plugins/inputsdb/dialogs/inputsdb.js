@@ -1,5 +1,5 @@
 CKEDITOR.dialog.add('inputsdb', function(editor) {
-  var dataPath = editor.config.inputsdbDataPath || 'api/charts/list/'; 
+  var dataPath = editor.config.inputsdbDataPath || 'api/list'; 
 
   function fetchData() {
     return new Promise(function(resolve, reject) {
@@ -47,6 +47,7 @@ CKEDITOR.dialog.add('inputsdb', function(editor) {
               var element = this.getDialog().getContentElement('tab1', 'select')
               fetchData().then(function(data) {
                 images = data;
+                console.log(images)
                 fillSelect(element, images);
               }).catch(function(error) {
                 console.error(error);
