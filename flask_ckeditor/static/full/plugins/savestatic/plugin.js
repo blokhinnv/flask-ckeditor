@@ -2,12 +2,12 @@ CKEDITOR.plugins.add('savestatic', {
   init: function(editor) {
       editor.addCommand('savestatic', {
           exec: function(editor) {
-            
+
               // Код для сохранения данных на сервер
               var data_html = editor.getData();
 
-              var data = {"name" : '', "note" : '', "data" : data_html}
-
+              var data = {"name" : '1', "description" : '2', "context" : data_html}
+              console.log(data)
               fetch('pages/api', {
                 method: 'POST',
                 headers: {
