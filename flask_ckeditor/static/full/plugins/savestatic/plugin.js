@@ -6,10 +6,18 @@ CKEDITOR.plugins.add('savestatic', {
               // Код для сохранения данных на сервер
               var data_html = editor.getData();
       
-              var data = {"name" : '1', "description" : '2', "context" : data_html}
+
+              // let utf8 = data_html.getBytes("UTF8");
+              // htmlMessage= new String(new Base64().encode(utf8));
+
+
+              // let dec = new Base64().decode(htmlMessage.getBytes());
+              // htmlMessage = new String(dec , "UTF8");
+
+
+              var data = {name : '1', description : '2', context : data_html}
               console.log(data)
-
-
+              
               fetch('pages/api', {
                 method: 'POST',
                 headers: {
