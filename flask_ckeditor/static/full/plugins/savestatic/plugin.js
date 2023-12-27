@@ -15,7 +15,9 @@ CKEDITOR.plugins.add('savestatic', {
               // htmlMessage = new String(dec , "UTF8");
 
 
-              var data = {name : '1', description : '2', context : data_html}
+              // var data = {name : '1', description : '2', context : data_html}
+              var data = {name : '1', description : '2'}
+
               console.log(data)
               
               fetch('pages/api', {
