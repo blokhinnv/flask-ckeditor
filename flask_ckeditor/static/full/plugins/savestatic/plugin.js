@@ -12,7 +12,7 @@ CKEDITOR.plugins.add('savestatic', {
 
               console.log(data)
               
-              fetch('pages/api', {
+              fetch('/api', {
                 method: 'POST',
                 headers: {
                   'Accept': 'application/json',
