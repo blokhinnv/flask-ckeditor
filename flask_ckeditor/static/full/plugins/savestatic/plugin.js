@@ -20,7 +20,7 @@ CKEDITOR.plugins.add('savestatic', {
                 },
                 body: JSON.stringify(data)
               })
-              .then(response => console.log(response))
+              .then(response => response.json())
               .then(data => console.log('Success:', data))
               .catch((error) => console.error('Error:', error));
           }
