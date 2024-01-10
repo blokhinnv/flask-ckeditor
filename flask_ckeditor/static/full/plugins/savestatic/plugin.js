@@ -6,7 +6,7 @@ CKEDITOR.plugins.add('savestatic', {
               // Код для сохранения данных на сервер
               var data_html = editor.getData();
       
-
+              console.log(document.getElementById('title').value)
               var data = {name : 'Title', description : 'Note', content : data_html}
               // var data = {name : '1', description : '2'}
 
