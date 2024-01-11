@@ -5,7 +5,7 @@ CKEDITOR.plugins.add('savestatic', {
 
               // Код для сохранения данных на сервер
               var data_html = editor.getData();
-      
+              var modal_timeout;
               
               var data = {name : document.getElementById('title').value, description : document.getElementById('description').value, content : data_html}
               fetch('http://localhost:5000/pages/api', {
@@ -20,8 +20,8 @@ CKEDITOR.plugins.add('savestatic', {
                 response.json()
                 if(response.status == 201){
                   document.getElementById('btn-save').style.display = 'block';
-                  clearTimeout(timeout)
-                  let timeout = setTimeout(function() {
+                  clearTimeout(modal_timeout)
+                  let modal_timeout = setTimeout(function() {
                       
 
                     document.getElementById('btn-save').style.display = 'none';
