@@ -20,14 +20,15 @@ CKEDITOR.plugins.add('savestatic', {
                 response.json()
                 if(response.status == 201){
                   document.getElementById('btn-save').style.display = 'block';
+                  clearTimeout(timeout)
+                  let timeout = setTimeout(function() {
+                      
 
-                  setTimeout(function() {
                     document.getElementById('btn-save').style.display = 'none';
                   }, 2000);
                 
                 }
               })
-              .then(res_data)
               .catch((error) => console.error('Error:', error));
 
               
