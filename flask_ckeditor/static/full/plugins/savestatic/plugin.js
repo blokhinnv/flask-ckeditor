@@ -8,7 +8,7 @@ CKEDITOR.plugins.add('savestatic', {
       
               
               var data = {name : document.getElementById('title').value, description : document.getElementById('description').value, content : data_html}
-              
+              let result
               fetch('http://localhost:5000/pages/api', {
                 method: 'POST',
                 headers: {
@@ -17,8 +17,11 @@ CKEDITOR.plugins.add('savestatic', {
                 },
                 body: JSON.stringify(data)
               })
-              .then(response => response.json())
-              .then(data => console.log('Success:', data))
+              .then(response => {
+                response.json()
+                console.log(response)
+              })
+              .then(res_data => console.log('Success:', res_data))
               .catch((error) => console.error('Error:', error));
 
               if(data.status == 201){
