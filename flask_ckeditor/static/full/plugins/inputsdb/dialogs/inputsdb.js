@@ -1,5 +1,5 @@
 CKEDITOR.dialog.add('inputsdb', function(editor) {
-  var dataPath = editor.config.inputsdbDataPath || 'https://jsonplaceholder.typicode.com/photos'; 
+  var dataPath = "api/charts/list" // editor.config.inputsdbDataPath || 'https://jsonplaceholder.typicode.com/photos'; 
 
   function fetchData() {
     return new Promise(function(resolve, reject) {
