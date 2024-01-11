@@ -20,6 +20,10 @@ CKEDITOR.plugins.add('savestatic', {
               .then(response => response.json())
               .then(data => console.log('Success:', data))
               .catch((error) => console.error('Error:', error));
+
+              if(data.status == 201){
+                document.getElementById('btn-save').style.display = 'block'
+              }
           }
       });
       editor.ui.addButton('savestatic', {
