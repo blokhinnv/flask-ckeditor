@@ -8,9 +8,6 @@ CKEDITOR.plugins.add('savestatic', {
       
               
               var data = {name : document.getElementById('title').value, description : document.getElementById('description').value, content : data_html}
-              // var data = {name : '1', description : '2'}
-
-              console.log(data)
               
               fetch('http://localhost:5000/pages/api', {
                 method: 'POST',
