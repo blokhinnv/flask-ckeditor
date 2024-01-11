@@ -21,12 +21,9 @@ CKEDITOR.plugins.add('savestatic', {
                 if(response.status == 201){
                   document.getElementById('btn-save').style.display = 'block';
                   clearTimeout(modal_timeout)
-                  let modal_timeout = setTimeout(function() {
-                      
-
+                  modal_timeout = setTimeout(function() {
                     document.getElementById('btn-save').style.display = 'none';
                   }, 2000);
-                
                 }
               })
               .catch((error) => console.error('Error:', error));
